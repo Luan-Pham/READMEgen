@@ -37,10 +37,10 @@ const questions = [
     message: "Provide test instructions for the provide.",
   },
   {
-    type: "checkbox",
+    type: "list",
     name: "license",
     message: "Please select any licenses.",
-    choices: ["inquirer", "gitHub", "none"],
+    choices: ["ISC", "Apache", "GNU", "MIT", "Mozilla", "BSD", "Eclipse"],
   },
   {
     type: "input",
@@ -65,7 +65,7 @@ function writeToFile(fileName, data) {
 const init = () => {
   inquirer
     .prompt(questions)
-    .then((answers) => writeToFile("READme2.md", generateMarkdown(answers)))
+    .then((answers) => writeToFile("READme.md", generateMarkdown(answers)))
     .then(() => console.log("Successfully written to READme"))
     .catch((err) => console.error(err));
 };
