@@ -90,7 +90,7 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## Questions
-    -${data.gitHub}
+    -https://github.com/${data.gitHub}
     -${data.email}   
 `;
 }
